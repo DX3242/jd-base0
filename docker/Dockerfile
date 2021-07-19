@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 ARG JD_BASE_URL=https://hub.fastgit.org/DX3242/jd-base0.git
 ARG JD_BASE_BRANCH=main
-ARG JD_SCRIPTS_URL=https://ghproxy.com/https://github.com/wuzhi04/MyActions
+ARG JD_SCRIPTS_URL=https://gitee.com/ZFeng3242/JD-haoyangmao.git
 ARG JD_SCRIPTS_BRANCH=main
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     LANG=zh_CN.UTF-8 \
