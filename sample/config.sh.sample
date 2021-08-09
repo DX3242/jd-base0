@@ -158,29 +158,24 @@ ForOtherTree4=""
 ForOtherTree5=""
 ForOtherTree6=""
 
-################################## 定义燃夏部分开关 ##################################
-## 是否入会，true 入会，false 不入会，默认false
-
-export summer_movement_joinjoinjoinhui=""
-
-
+################################## 定义jd_carnivalcity.js ##################################
 ## 具体填法及要求详见本文件最下方“互助码填法示例”
-MySummer1=""
-MySummer2=""
-MySummer3=""
-MySummer4=""
-MySummer5=""
-MySummer6=""
-MySummerA=""
-MySummerB=""
+MyJD8181=""
+MyJD8182=""
+MyJD8183=""
+MyJD8184=""
+MyJD8185=""
+MyJD8186=""
+MyJD818A=""
+MyJD818B=""
 
 
-ForOtherSummer1=""
-ForOtherSummer2=""
-ForOtherSummer3=""
-ForOtherSummer4=""
-ForOtherSummer5=""
-ForOtherSummer6=""
+ForOtherJD8181=""
+ForOtherJD8182=""
+ForOtherJD8183=""
+ForOtherJD8184=""
+ForOtherJD8185=""
+ForOtherJD8186=""
 
 
 ################################## 定义jd_health互助（临时） ##################################
