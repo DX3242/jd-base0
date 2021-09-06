@@ -1,6 +1,6 @@
-## Version: v3.47.0
-## Date: 2021-08-4
-## Update Content: 加入自定义JXUA环境变量 位置在第90行主要用于jxmc奖励领取（配置文件不会自动智能替换，需要手动进入面板通过对比工具手动替换）
+## Version: v3.49.0
+## Date: 2021-09-6
+## Update Content: 定义jd_fruit是否再次浇水（配置文件不会自动智能替换，需要手动进入面板通过对比工具手动替换）
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
 
@@ -121,6 +121,19 @@ export QYWX_KEY=""
 ## 依次填上corpid的值,corpsecret的值,touser的值,agentid,media_id的值，注意用,号隔开，例如："wwcff56746d9adwers,B-791548lnzXBE6_BWfxdf3kSTMJr9vFEPKAbh6WERQ,mingcheng,1000001,2COXgjH2UIfERF2zxrtUOKgQ9XklUqMdGSWLBoW_lSDAdafat"
 export QYWX_AM=""
 
+## 9. go-cqhttp通知设置区域
+##gobot_url 填写请求地址http://127.0.0.1/send_private_msg
+##gobot_token 填写在go-cqhttp文件设置的访问密钥
+##gobot_qq 填写推送到个人QQ或者QQ群号
+##go-cqhttp相关API https://docs.go-cqhttp.org/api
+##推送到个人QQ: http://127.0.0.1/send_private_msg  群：http://127.0.0.1/send_group_msg 
+export GOBOT_URL=""
+
+##访问密钥
+export GOBOT_TOKEN=""
+
+##如果GOBOT_URL设置 /send_private_msg 则需要填入 user_id=个人QQ 相反如果是 /send_group_msg 则需要填入 group_id=QQ群
+export GOBOT_QQ=""
 
 ################################## 定义每日签到的通知形式（选填） ##################################
 ## js脚本每日签到提供3种通知方式，分别为：
@@ -157,26 +170,6 @@ ForOtherTree3=""
 ForOtherTree4=""
 ForOtherTree5=""
 ForOtherTree6=""
-
-################################## 定义jd_carnivalcity.js ##################################
-## 具体填法及要求详见本文件最下方“互助码填法示例”
-MyJD8181=""
-MyJD8182=""
-MyJD8183=""
-MyJD8184=""
-MyJD8185=""
-MyJD8186=""
-MyJD818A=""
-MyJD818B=""
-
-
-ForOtherJD8181=""
-ForOtherJD8182=""
-ForOtherJD8183=""
-ForOtherJD8184=""
-ForOtherJD8185=""
-ForOtherJD8186=""
-
 
 ################################## 定义jd_health互助（临时） ##################################
 ## 具体填法及要求详见本文件最下方“互助码填法示例”
@@ -513,6 +506,9 @@ export FRUIT_NOTIFY_CONTROL=""
 ## 如需切换为换豆（不浇水），请修改为 "true"
 export FRUIT_BEAN_CARD=""
 
+################################## 定义jd_fruit是否再次浇水（选填） ##################################
+## 默认执行再次浇水，如想一直攒着水滴攒一年几万滴，可以改为true不执行再次浇水，攒水滴
+export DO_TEN_WATER_AGAIN=""
 
 ################################## 定义jd_joy喂食克数（选填） ##################################
 ## 你期望的jd_joy每次喂食克数，只能填入10、20、40、80，默认为10
