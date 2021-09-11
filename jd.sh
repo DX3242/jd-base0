@@ -55,7 +55,7 @@ function Combin_Sub {
       TmpB=${!TmpA}
       ForOtherAll="${ForOtherAll}@${TmpB}"
     done
-    
+
     for ((n=1; n<=${UserSum}; n++)); do
       for num in ${TempBlockCookie}; do
         [[ $n -eq $num ]] && continue 2
@@ -94,8 +94,7 @@ function Combin_All {
   export JDSGMH_SHARECODES=$(Combin_Sub ForOtherSgmh)
   export JDCFD_SHARECODES=$(Combin_Sub ForOtherCfd)
   export JDHEALTH_SHARECODES=$(Combin_Sub ForOtherhealth)
-  export CITY_SHARECODES=$(Combin_Sub ForOtherCity)
-  export JD818_SHARECODES=$(Combin_Sub ForOtherJD818)
+  export MONEYTREE_SHARECODES=$(Combin_Sub ForOtherTree)
 }
 
 ## 转换JD_BEAN_SIGN_STOP_NOTIFY或JD_BEAN_SIGN_NOTIFY_SIMPLE
@@ -187,7 +186,7 @@ function Reset_Pwd {
 ## 运行脚本
 function Run_Normal {
   Import_Conf $1 && Detect_Cron && Set_Env
-  
+
   FileNameTmp1=$(echo $1 | perl -pe "s|\.js||")
   FileNameTmp2=$(echo $1 | perl -pe "{s|jd_||; s|\.js||; s|^|jd_|}")
   SeekDir="${ScriptsDir} ${ScriptsDir}/backUp ${ConfigDir}"
@@ -206,7 +205,7 @@ function Run_Normal {
       break
     fi
   done
-  
+
   if [ -n "${FileName}" ] && [ -n "${WhichDir}" ]
   then
     [ $# -eq 1 ] && Random_Delay
@@ -241,6 +240,15 @@ case $# in
       Run_Normal $1 $2
     else
       echo -e "\n命令输入错误...\n"
+      Help
+    fi
+    ;;
+  3)
+    if [[ $2 == now ]] && [ -f $3 ]; then
+      FileConf=$3
+      Run_Normal $1 $2
+    else
+      echo -e "\n临时config文件路径错误...\n"
       Help
     fi
     ;;
