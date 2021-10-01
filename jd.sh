@@ -163,7 +163,7 @@ function Run_Nohup {
 
 ## 运行挂机脚本
 function Run_HangUp {
-  HangUpJs="jd_cfd_loop"
+  HangUpJs=""
   cd ${ScriptsDir}
   for js in ${HangUpJs}; do
     Import_Conf ${js} && Set_Env
