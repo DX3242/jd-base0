@@ -441,6 +441,24 @@ ForOtherCfd4=""
 ForOtherCfd5=""
 ForOtherCfd6=""
 
+################################## 定义jd_City活动互助（选填） ##################################
+## 具体填法及要求详见本文件最下方“互助码填法示例”
+MyCity1=""
+MyCity2=""
+MyCity3=""
+MyCity4=""
+MyCity5=""
+MyCity6=""
+MyCityA=""
+MyCityB=""
+
+ForOtherCity1=""
+ForOtherCity2=""
+ForOtherCity3=""
+ForOtherCity4=""
+ForOtherCity5=""
+ForOtherCity6=""
+
 ################################## 定义jd_ddwj_exchange兑换京豆数量（选填） ##################################
 ## 可填的数字为：0,200,500,1000，0或者不填代表不兑换，其余数字即为兑换数量
 export BeansCount=""
