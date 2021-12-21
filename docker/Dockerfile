@@ -11,7 +11,7 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         ENABLE_HANGUP=false \
         ENABLE_RESET_REPO_URL=true \
         JD_SHELL_URL=https://ghproxy.com/https://github.com/DX3242/jd-base0.git \
-        JD_SCRIPTS_URL=https://ghproxy.com/https://github.com/ZFeng1005/jd_scripts.git
+        JD_SCRIPTS_URL=https://ghproxy.com/https://github.com/ZFeng1005/MyScripts.git
 WORKDIR ${JD_DIR}
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
         && apk update -f \
