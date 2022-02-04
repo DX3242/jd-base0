@@ -37,8 +37,8 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone \
         && git clone -b ${JD_SHELL_BRANCH} ${JD_SHELL} ${JD_DIR} \
-		&& git config --global user.email "LingFeng0918@@users.noreply.github.com" \
-		&& git config --global user.name "LingFeng0918" \
+		&& git config --global user.email "ZFeng1005@@users.noreply.github.com" \
+		&& git config --global user.name "ZFeng1005" \
 		&& cd ${JD_DIR}/panel \
         && npm install \
         && npm install -g pm2 \
