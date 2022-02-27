@@ -1,5 +1,5 @@
 FROM node:15.9.0-alpine3.12
-ARG JD_SHELL=https://github.com/DX3242/jd-base0.git
+ARG JD_SHELL=https://ghproxy.zfeng1005.workers.dev/https://github.com/DX3242/jd-base0.git
 ARG JD_SHELL_BRANCH=v4
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         LANG=zh_CN.UTF-8 \
@@ -10,8 +10,8 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         ENABLE_WEB_PANEL=true \
         ENABLE_HANGUP=false \
         ENABLE_RESET_REPO_URL=true \
-        JD_SHELL_URL=https://github.com/DX3242/jd-base0.git \
-        JD_SCRIPTS_URL=https://gitee.com/ZFeng3242/JD-haoyangmao.git
+        JD_SHELL_URL=https://ghproxy.zfeng1005.workers.dev/https://github.com/DX3242/jd-base0.git \
+        JD_SCRIPTS_URL=https://ghproxy.zfeng1005.workers.dev/https://github.com/ZFeng1005/MyScripts.git
 WORKDIR ${JD_DIR}
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
         && apk update -f \

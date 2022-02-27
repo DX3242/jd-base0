@@ -4,8 +4,8 @@
 #dir_shell=$(dirname $(readlink -f "$0"))
 dir_shell=${JD_DIR:-$(cd $(dirname $0); pwd)}
 dir_root=$dir_shell
-url_shell=${JD_SHELL_URL:-https://github.com/DX3242/jd-base0.git}
-url_scripts=${JD_SCRIPTS_URL:-https://gitee.com/ZFeng3242/JD-haoyangmao.git}
+url_shell=${JD_SHELL_URL:-https://ghproxy.zfeng1005.workers.dev/https://github.com/DX3242/jd-base0.git}
+url_scripts=${JD_SCRIPTS_URL:-https://ghproxy.zfeng1005.workers.dev/https://github.com/ZFeng1005/MyScripts.git}
 send_mark=$dir_shell/send_mark
 
 ## 导入通用变量与函数
@@ -501,7 +501,7 @@ update_scripts () {
          rm -rf $dir_scripts
     fi
 
-    url_scripts=${JD_SCRIPTS_URL:-https://ghproxy.com/https://github.com/ZFeng1005/MyScripts.git}
+    url_scripts=${JD_SCRIPTS_URL:-https://ghproxy.zfeng1005.workers.dev/https://github.com/ZFeng1005/MyScripts.git}
     branch_scripts=${JD_SCRIPTS_BRANCH:-main}
 
     ## 更新或克隆scripts
