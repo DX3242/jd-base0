@@ -1,7 +1,7 @@
 FROM node:lts-alpine
-ARG JD_BASE_URL=https://ghproxy.zfeng1005.workers.dev/https://github.com/DX3242/jd-base0
+ARG JD_BASE_URL=https://git.codedoge.top/https://github.com/DX3242/jd-base0
 ARG JD_BASE_BRANCH=main
-ARG JD_SCRIPTS_URL=https://ghproxy.zfeng1005.workers.dev/https://github.com/ZFeng1005/MyScripts
+ARG JD_SCRIPTS_URL=https://git.codedoge.top/https://github.com/ZFeng1005/MyScripts
 ARG JD_SCRIPTS_BRANCH=main
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     LANG=zh_CN.UTF-8 \
